@@ -91,7 +91,7 @@ const FormBase: React.FC<FormBaseProps> = ({
         dataWithTerms.amount = parseFloat(dataWithTerms.amount.toString());
       }
 
-      const response = await controller.create("/payments", dataWithTerms);
+      const response = (await controller.create("/payments", dataWithTerms)) as { id?: unknown };
       console.log(response);
       console.log(submitSuccess);
       if (response.id) {
