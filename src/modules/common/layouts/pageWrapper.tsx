@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Navbar from "../components/navbar";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
@@ -6,7 +6,7 @@ import PageWrapperProps from "../types/pageTypes";
 import WhatsAppIcon from "../components/whatsAppIcon";
 import styles from "../assets/css/layout.module.css"
 
-const pageVariants = {
+const pageVariants: Variants = {
   initial: { x: "100%", opacity: 0 },
   animate: { x: "0%", opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
   exit: { x: "-100%", opacity: 0, transition: { duration: 0.5, ease: "easeIn" } }

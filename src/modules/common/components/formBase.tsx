@@ -74,7 +74,7 @@ const FormBase: React.FC<FormBaseProps> = ({
         terms: boolean;
       } = { ...data, terms: isTermsAccepted };
 
-      const response = await controller.create("/contacts", dataWithTerms);
+      const response = (await controller.create("/contacts", dataWithTerms)) as { id?: unknown };
       if (response.id) {
         console.log(submitSuccess);
         showResponse("Éxito", "Formulario enviado con éxito");

@@ -1,8 +1,8 @@
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import siteConfig from "./config/siteConfig";
 
-const pageVariants = {
+const pageVariants: Variants = {
   initial: { opacity: 0, x: "100%" },
   animate: { opacity: 1, x: "0%", transition: { duration: 0.3, ease: "easeOut" } },
   exit: { opacity: 0, x: "-100%", transition: { duration: 0.3, ease: "easeIn" } },
